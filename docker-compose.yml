@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  linea-besu-node:
-    image: consensys/linea-besu-package:latest
-    container_name: linea-besu
+  besu-mainnet-node:
+    image: hyperledger/besu:latest
+    container_name: besu-mainnet
     command: >
       --config-file=/config/config-snap-mainnet.toml
       --genesis-file=/config/genesis-mainnet.json
@@ -13,7 +13,7 @@ services:
       --rpc-ws-enabled
       --rpc-ws-host=0.0.0.0
       --rpc-ws-port=8546
-      --host-allowlist="*"  
+      --host-allowlist="*"  # Genel erişim
     ports:
       - "30303:30303"
       - "30303:30303/udp"
