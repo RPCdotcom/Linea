@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  linea-besu-node:
+    image: consensys/linea-besu-package:latest
+    container_name: linea-besu
+    command: >
+      --config-file=/config/config-snap-mainnet.toml
+      --genesis-file=/config/genesis-mainnet.json
+      --p2p-host=0.0.0.0
+      --rpc-http-enabled
+      --rpc-http-host=0.0.0.0
+      --rpc-http-port=8545
+      --rpc-ws-enabled
+      --rpc-ws-host=0.0.0.0
+      --rpc-ws-port=8546
+      --host-allowlist="*"  
+    ports:
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "8545:8545"
+      - "8546:8546"
+    volumes:
+      - ./config:/config
+    restart: unless-stopped
