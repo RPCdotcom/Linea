@@ -84,6 +84,12 @@ docker compose up -d
 docker logs -f besu-mainnet -n 150
 ```
 
+- İlk Kurulumda Peer gösterir ve Block İmport yazar ara ara %'delik dilimi gösterip ne kadar sync olduğunu belirtir.
+
+- Tam SYNC Server ; 
+
+<img width="1595" height="639" alt="image" src="https://github.com/user-attachments/assets/3f58bcb4-b2d4-4a85-a31d-50fbbf5c857a" />
+
 #### RPC : 
 
 - Cüzdanınız RPC yada Bağlantı Uç Noktası Kısmında Linea Tarafına Ekleyebilirsiniz : `http://yourserver_ip:8549`
