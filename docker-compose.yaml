@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  besu-mainnet-node:
+    image: hyperledger/besu:latest
+    container_name: besu-mainnet
+    command: >
+      --config-file=/config/config-snap-mainnet.toml
+      --genesis-file=/config/genesis-mainnet.json
+      --p2p-host=0.0.0.0
+      --rpc-http-enabled
+      --rpc-http-host=0.0.0.0
+      --rpc-http-port=8545
+      --rpc-ws-enabled
+      --rpc-ws-host=0.0.0.0
+      --rpc-ws-port=8546
+      --host-allowlist="*"
+    ports:
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "8549:8545"
+      - "8548:8546"
+    volumes:
+      - ./data:/var/lib/besu
+      - ./config:/config
+    restart: unless-stopped
