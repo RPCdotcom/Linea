@@ -67,11 +67,11 @@ curl -Ls https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/docke
 docker compose up -d
 ```
 
-## Logs ; 
+## Loglar ; 
 ```bash [npx]
 docker logs -f besu-mainnet -n 150
 ```
 
 #### RPC : 
 
-- For EVM Metamask etc. Wallet : `http://yourserver_ip:8549`
+- Cüzdanınız RPC yada Bağlantı Uç Noktası Kısmında Linea Tarafına Ekleyebilirsiniz : `http://yourserver_ip:8549`
