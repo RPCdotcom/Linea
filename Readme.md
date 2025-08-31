@@ -92,4 +92,4 @@ docker logs -f besu-mainnet -n 150
 
 #### RPC : 
 
-- Cüzdanınız RPC yada Bağlantı Uç Noktası Kısmında Linea Tarafına Ekleyebilirsiniz : `http://yourserver_ip:8549`
+- Cüzdanınız RPC yada Bağlantı Uç Noktası Kısmında Linea Tarafına Ekleyebilirsiniz : `http://yourserver_ip:8545`
