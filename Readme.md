@@ -14,14 +14,14 @@
 | Full Node         | +8-16 GB  | +500 GB* | 6+    | +100 mbps  |
 
 
-## Update
+## Güncelleme - Foşur Foşur Temizleme + Yenileme
 
 ```bash [npx]
 sudo apt update && sudo apt upgrade -y
 sudo apt install htop ca-certificates zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev tmux iptables curl nvme-cli git wget make jq libleveldb-dev build-essential pkg-config ncdu tar clang bsdmainutils lsb-release libssl-dev libreadline-dev libffi-dev jq gcc screen file nano btop unzip lz4 -y
 ```
 
-## Docker
+## Docker İndirelim Sıra Sıra Girin
 
 ```bash [npx]
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
