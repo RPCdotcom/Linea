@@ -57,11 +57,11 @@ sudo usermod -aG docker $USER
 ## Linea  Besu İndirelim
 
 ```bash [npx]
-mkdir linearpc
+mkdir linea-rpc
 ```
 
 ```bash [npx]
-cd linearpc
+cd linea-rpc
 ```
 
 ```bash [npx]
