@@ -54,25 +54,23 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-## Linea Hyperledger Besu İndirelim
+## Linea  Besu İndirelim
 
 ```bash [npx]
-wget https://docs.linea.build/files/besu/besu-mainnet.zip
-unzip besu-mainnet.zip
+mkdir linearpc
 ```
 
-<img src="https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/linea-files.PNG" width="900" />
-
-- Besu Dosyasına Girelim ; 
+```bash [npx]
+cd linearpc
+```
 
 ```bash [npx]
-cd besu-mainnet
+docker pull consensys/linea-besu-package:latest
 ```
 
 ## Configs ; 
 ```bash [npx]
-curl -Ls https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/docker-compose.yaml > $HOME/besu-mainnet/docker-compose.yaml
-curl -Ls https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/config-snap-mainnet.toml > $HOME/besu-mainnet/config/config-snap-mainnet.toml
+curl -Ls https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/docker-compose.yaml
 ```
 
 <img width="1432" height="59" alt="image" src="https://github.com/user-attachments/assets/9e4a6e5b-4612-48f0-be26-894a659a7443" />
