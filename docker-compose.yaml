@@ -1,25 +1,22 @@
-version: '3.8'
+version: "3.9"
 services:
-  besu-mainnet-node:
-    image: hyperledger/besu:latest
-    container_name: besu-mainnet
+  linea-besu:
+    image: consensys/linea-besu-package:latest
+    container_name: linea-besu
+    restart: unless-stopped
+    ports:
+      - "8545:8545"   # HTTP RPC
+      - "8546:8546"   # WS RPC
     command: >
-      --config-file=/config/config-snap-mainnet.toml
-      --genesis-file=/config/genesis-mainnet.json
-      --p2p-host=0.0.0.0
-      --rpc-http-enabled
+      --profile=advanced-mainnet
+      --plugin-linea-l1-rpc-endpoint=https://ethereum.blockpi.network/v1/rpc/<BLOCKPI_API_KEY>
+      --rpc-http-enabled=true
       --rpc-http-host=0.0.0.0
       --rpc-http-port=8545
-      --rpc-ws-enabled
+      --rpc-http-cors-origins="*"
+      --rpc-http-api=ETH,NET,WEB3,LINEA
+      --rpc-ws-enabled=true
       --rpc-ws-host=0.0.0.0
       --rpc-ws-port=8546
-      --host-allowlist="*"
-    ports:
-      - "30303:30303"
-      - "30303:30303/udp"
-      - "8549:8545"
-      - "8548:8546"
     volumes:
-      - ./data:/var/lib/besu
-      - ./config:/config
-    restart: unless-stopped
+      - ./linea-data:/var/lib/besu
