@@ -76,6 +76,9 @@ curl -Ls https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/docke
 docker compose up -d
 ```
 
+<img width="1419" height="221" alt="image" src="https://github.com/user-attachments/assets/b81d84e4-4c71-46c6-ac32-a75c14c2e86f" />
+
+
 ## Loglar ; 
 ```bash [npx]
 docker logs -f besu-mainnet -n 150
