@@ -31,12 +31,16 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 docker version
 ```
 
+<img width="815" height="865" alt="image" src="https://github.com/user-attachments/assets/1061ed49-d9a9-426f-b17b-bfa6db2781b9" />
+
+
 ```bash [npx]
 VER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d '"' -f 4)
 curl -L "https://github.com/docker/compose/releases/download/$VER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
+<img width="993" height="170" alt="image" src="https://github.com/user-attachments/assets/abebe214-c28a-447e-9b04-3280f206a121" />
 
 
 ```bash [npx]
