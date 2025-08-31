@@ -5,8 +5,10 @@ services:
     container_name: linea-besu
     restart: unless-stopped
     ports:
-      - "8545:8545"   # HTTP RPC
-      - "8546:8546"   # WS RPC
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "8545:8545"
+      - "8546:8546"
     command: >
       --profile=advanced-mainnet
       --plugin-linea-l1-rpc-endpoint=https://ethereum.blockpi.network/v1/rpc/<BLOCKPI_API_KEY>
@@ -18,5 +20,6 @@ services:
       --rpc-ws-enabled=true
       --rpc-ws-host=0.0.0.0
       --rpc-ws-port=8546
+      --p2p-host=0.0.0.0
     volumes:
       - ./linea-data:/var/lib/besu
