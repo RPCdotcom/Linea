@@ -51,7 +51,7 @@ wget https://docs.linea.build/files/besu/besu-mainnet.zip
 unzip besu-mainnet.zip
 ```
 
-<img src="https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/linea-files.PNG" width="600" />
+<img src="https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/linea-files.PNG" width="900" />
 
 - Besu Dosyasına Girelim ; 
 
