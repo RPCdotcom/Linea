@@ -17,6 +17,8 @@
 |------------------|----------------------------|----------------------------|
 | **NetCup**          | [Link](https://www.netcup.com/en/?ref=261820) | Uygun - Vergi %0 |
 
+- Sunucuya Bağlanma : https://github.com/RPCdotcom/Linea/blob/main/Sunucuyanasilbaglanirim.md
+
 
 ## Güncelleme - Foşur Foşur Temizleme + Yenileme
 
