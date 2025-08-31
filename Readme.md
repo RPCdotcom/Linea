@@ -16,7 +16,6 @@
 | Server Sağlayıcı         | Link              | Features |
 |------------------|----------------------------|----------------------------|
 | **NetCup**          | [Link](https://www.netcup.com/en/?ref=261820) | Uygun - Vergi %0 |
-| **Contabo**          | [Link](https://www.dpbolvw.net/click-101330552-12454592)                     | Uygun - Disk olarak Sıkıntı olabilir Full Node'de  |
 
 
 ## Güncelleme - Foşur Foşur Temizleme + Yenileme
