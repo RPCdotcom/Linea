@@ -82,6 +82,8 @@ wget https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/docker-co
 nano docker-compose.yaml
 ```
 
+- Kırmızı ile altını çizdiğim alanı silin "="den sonrasını silip Blockpi'den aldığınızı yapıştırın.
+
 <img width="803" height="387" alt="image" src="https://github.com/user-attachments/assets/78b27481-cfd7-4726-bfa1-d94e1f41e7a9" />
 
 - BlockPi'den Aldığımız Ethereum Mainnet RPC ile değiştiriyoruz ; https://dashboard.blockpi.io/rpc/endpoint
