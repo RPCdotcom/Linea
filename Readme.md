@@ -93,3 +93,5 @@ docker logs -f besu-mainnet -n 150
 #### RPC : 
 
 - Cüzdanınız RPC yada Bağlantı Uç Noktası Kısmında Linea Tarafına Ekleyebilirsiniz : `http://yourserver_ip:8545`
+
+<img width="393" height="590" alt="image" src="https://github.com/user-attachments/assets/aa1ed999-1688-48cc-88fd-2721ecdba84d" />
