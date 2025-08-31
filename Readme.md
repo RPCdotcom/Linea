@@ -76,6 +76,20 @@ curl -Ls https://raw.githubusercontent.com/RPCdotcom/Linea/refs/heads/main/docke
 <img width="1432" height="59" alt="image" src="https://github.com/user-attachments/assets/9e4a6e5b-4612-48f0-be26-894a659a7443" />
 
 
+## L1 RPC Değişelim ; 
+
+```bash [npx]
+nano docker-compose.yaml
+```
+
+<img width="803" height="387" alt="image" src="https://github.com/user-attachments/assets/78b27481-cfd7-4726-bfa1-d94e1f41e7a9" />
+
+- BlockPi'den Aldığımız Ethereum Mainnet RPC ile değiştiriyoruz ; https://dashboard.blockpi.io/rpc/endpoint
+
+<img width="938" height="538" alt="image" src="https://github.com/user-attachments/assets/3375e72a-b0b1-4db6-9b9d-34fe773afd4a" />
+
+- Değiştirdikten sonra CTRL'ye basılı tutup CTRL X ve CTRL Y ardından Enter ile kaydedin.
+
 ## Başlatalım ; 
 ```bash [npx]
 docker compose up -d
