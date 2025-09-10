@@ -1,8 +1,11 @@
+```bash [npx]
 sudo apt update && sudo apt upgrade -y
 sudo apt install nginx certbot python3-certbot-nginx -y
-
+```
+```bash [npx]
 sudo nano /etc/nginx/sites-available/linea.domain.com
-
+```
+```bash [npx]
 server {
     listen 80;
     server_name linea.domain.com;
@@ -52,10 +55,12 @@ server {
 
 # Rate limit zone (her IP için saniyede 35 istek)
 limit_req_zone $binary_remote_addr zone=one:10m rate=35r/s;
-
+```
+```bash [npx]
 sudo ln -s /etc/nginx/sites-available/linea.rpcdot.com /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
-
+```
+```bash [npx]
 sudo certbot --nginx -d linea.domain.com
-
+```
