@@ -1,0 +1,61 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install nginx certbot python3-certbot-nginx -y
+
+sudo nano /etc/nginx/sites-available/linea.domain.com
+
+server {
+    listen 80;
+    server_name linea.domain.com;
+
+    # Let's Encrypt doğrulama için
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    server_name linea.domain.com;
+
+    # SSL sertifikaları (Let's Encrypt sonrası burası dolacak)
+#    ssl_certificate /etc/letsencrypt/live/linea.domaint.com/fullchain.pem;
+#    ssl_certificate_key /etc/letsencrypt/live/linea.domain.com/privkey.pem;
+
+    # HTTP RPC proxy
+    location / {
+        proxy_pass http://127.0.0.1:8545;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+
+        # Rate Limit
+        limit_req zone=one burst=20 nodelay;
+    }
+
+    # WebSocket proxy
+    location /ws {
+        proxy_pass http://127.0.0.1:8546;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+
+        # Rate Limit
+        limit_req zone=one burst=20 nodelay;
+    }
+}
+
+# Rate limit zone (her IP için saniyede 35 istek)
+limit_req_zone $binary_remote_addr zone=one:10m rate=35r/s;
+
+sudo ln -s /etc/nginx/sites-available/linea.rpcdot.com /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+
+sudo certbot --nginx -d linea.domain.com
+
